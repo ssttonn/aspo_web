@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "KelsonBold";
+    src: url(font/fonts/Kelson-Bold.otf);
+  }
+
+  @font-face {
+    font-family: "KelsonRegular";
+    src: url(font/fonts/Kelson-Regular.otf);
+  }
+
+  @font-face {
+    font-family: "KelsonLight";
+    src: url(font/fonts/Kelson-Light.otf);
+  }
+
+  @font-face {
+    font-family: "KelsonMedium";
+    src: url(font/fonts/Kelson-Medium.otf);
+  }
+
+  @font-face {
+    font-family: "KelsonExtraLight";
+    src: url(font/fonts/Kelson-ExtraLight.otf);
+  }
+
+  @font-face {
+    font-family: "KelsonExtraBold";
+    src: url(font/fonts/Kelson-ExtraBold.otf);
+  }
+}
