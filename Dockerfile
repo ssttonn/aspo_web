@@ -14,4 +14,4 @@ EXPOSE 5173
 
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=builder /aspo_api/dist /usr/share/nginx/html
+COPY --from=builder /aspo_web/dist /usr/share/nginx/html
