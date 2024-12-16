@@ -1,6 +1,6 @@
 FROM node:22.11.0-alpine as builder
 
-WORKDIR /aspo_api
+WORKDIR /aspo_web
 
 COPY package.json ./
 
