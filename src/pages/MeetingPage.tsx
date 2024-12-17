@@ -16,7 +16,7 @@ const MettingPage = () => {
         <div className="relative bg-white col-span-4 row-span-10">
           <div className="absolute left-0 right-0 top-0 bottom-0 xl:gap-3 gap-2 bg-backgroundDark rounded-common">
             <div className="h-full overflow-y-auto p-2 xl:p-3">
-              <ChatMessage />
+              <ChatMessage isMe content="Hello" />
             </div>
           </div>
         </div>
