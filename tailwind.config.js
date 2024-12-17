@@ -17,6 +17,9 @@ export default {
         backgroundDark: "#f5f5f5",
         secondary: "#f0f0f0",
       },
+      borderRadius: {
+        common: "30px",
+      },
     },
   },
   plugins: [],

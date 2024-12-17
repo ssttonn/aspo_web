@@ -54,7 +54,7 @@ const JoinRequest = ({
   return (
     <div
       ref={divRef}
-      className="flex flex-row items-center xl:gap-3 gap-2 bg-backgroundDark px-4 xl:px-6 xl:py-3 py-2 rounded-full"
+      className="flex flex-row items-center xl:gap-3 gap-2 bg-backgroundDark px-4 xl:px-6 xl:py-3 py-2 rounded-common"
     >
       <p className="font-KelsonBold">
         sstonn{" "}

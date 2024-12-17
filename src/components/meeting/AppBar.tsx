@@ -8,9 +8,9 @@ interface AppBarProps {
 
 const AppBar = ({ onBackClick }: AppBarProps) => {
   return (
-    <div className="bg-white flex rounded-full p-2 xl:p-3 items-center gap-2 xl:gap-3">
+    <div className="bg-white flex rounded-common p-2 xl:p-3 items-center gap-2 xl:gap-3">
       <MainButton
-        className="!bg-backgroundDark rounded-full"
+        className="!bg-backgroundDark rounded-common"
         onClick={onBackClick}
       >
         <ChevronLeft className="w-6 h-6 xl:w-10 xl:h-10" />
@@ -23,7 +23,7 @@ const AppBar = ({ onBackClick }: AppBarProps) => {
           Global meeting room
         </p>
       </div>
-      <JoinRequest shouldAppear={false} />
+      <JoinRequest shouldAppear={true} />
     </div>
   );
 };

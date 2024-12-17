@@ -39,7 +39,7 @@ const MainButton = ({
     <button
       ref={buttonRef}
       onClick={onButtonClick}
-      className={`bg-primary font-KelsonBold p-4 rounded-3xl hover:opacity-50 transition-all duration-200 ${className}`}
+      className={`bg-primary font-KelsonBold p-4 rounded-common hover:opacity-80 transition-all duration-200 ${className}`}
     >
       {title || children}
     </button>
