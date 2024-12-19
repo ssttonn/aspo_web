@@ -30,6 +30,8 @@ const MainButton = ({
         }
       );
 
+      e.stopPropagation();
+
       onClick?.(e);
     },
     [onClick]

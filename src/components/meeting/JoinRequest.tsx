@@ -1,6 +1,6 @@
 import { Check, X } from "lucide-react";
 import { memo, useRef } from "react";
-import MainButton from "../MainButton";
+import MainButton from "../common/MainButton";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 

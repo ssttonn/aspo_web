@@ -12,13 +12,15 @@ export default {
         KelsonExtraBold: ["KelsonExtraBold", "sans-serif"],
       },
       colors: {
-        primary: "#d6e4e0",
+        primary: "#1657ff",
+        primaryDark: "#0e4ff2",
+        paleBlack: "#212121",
         background: "#fafafa",
         backgroundDark: "#f5f5f5",
         secondary: "#f0f0f0",
       },
       borderRadius: {
-        common: "30px",
+        common: "14px",
       },
     },
   },
