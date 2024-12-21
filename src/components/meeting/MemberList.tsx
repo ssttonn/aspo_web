@@ -1,4 +1,4 @@
-import React from "react";
+import { MessageSquare } from "lucide-react";
 
 interface MemberListProps {
   className?: string;
@@ -6,7 +6,9 @@ interface MemberListProps {
 
 const MemberList = ({ className }: MemberListProps) => {
   return (
-    <div className={`${className} bg-white rounded-common`}>MemberList</div>
+    <div className={`${className} bg-white rounded-common lg:p-3 p-2`}>
+      <MessageSquare size={25} className="bg-primary" color="white" />
+    </div>
   );
 };
 

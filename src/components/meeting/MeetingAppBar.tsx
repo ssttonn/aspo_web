@@ -96,7 +96,7 @@ const MeetingAppBar = () => {
 
   return (
     <div className="bg-white flex lg:flex-row flex-col justify-between items-center lg:p-4 p-2 gap-2">
-      <div className="flex-1 f-center lg:justify-start">
+      <div className="flex-1 f-center lg:justify-start gap-2">
         <span className="font-KelsonMedium text-xl lg:text-2xl lg:text-start text-center text-paleBlack">
           Weekly meeting - Remote Strategy Session
         </span>
