@@ -7,18 +7,53 @@ import {
   Video,
 } from "lucide-react";
 import MainButton from "../components/common/MainButton";
-import ChatBox from "../components/meeting/ChatBox";
+import ChatBox from "../components/meeting/overlay/ChatBox";
 import MeetingAppBar from "../components/meeting/MeetingAppBar";
 import ParticipantVideoCard from "../components/meeting/ParticipantVideoCard";
+import { useCallback, useState } from "react";
+import ThingsToDiscussBox from "../components/meeting/overlay/ThingsToDiscussBox";
+
+enum MeetingPageOverlay {
+  none,
+  chat,
+  thingsToDiscuss,
+}
 
 const MettingPage = () => {
+  const [overlay, setOverlay] = useState<MeetingPageOverlay>(
+    MeetingPageOverlay.none
+  );
+
+  const toggleChatBox = useCallback(() => {
+    setOverlay(
+      overlay === MeetingPageOverlay.chat
+        ? MeetingPageOverlay.none
+        : MeetingPageOverlay.chat
+    );
+  }, [overlay]);
+
+  const toggleThingsToDiscussBox = useCallback(() => {
+    setOverlay(
+      overlay === MeetingPageOverlay.thingsToDiscuss
+        ? MeetingPageOverlay.none
+        : MeetingPageOverlay.thingsToDiscuss
+    );
+  }, [overlay]);
+
   return (
-    <div className="flex flex-col bg-background gap-2 xl:gap-3 w-screen h-screen">
+    <div className="flex flex-col bg-background gap-2 xl:gap-3 w-screen h-screen overflow-hidden">
       <MeetingAppBar />
       <div className="flex flex-col items-center flex-1 lg:mx-4 mx-3 mb-2 gap-2 h-[80vh]">
         <div className="relative flex-1 lg:min-h-[175px] min-h-[125px] self-stretch">
           <ParticipantVideoCard className="w-full h-full lg:min-h-[175px] min-h-[125px]" />
-          <ChatBox />
+          <ChatBox
+            isShowing={overlay === MeetingPageOverlay.chat}
+            onToggleHideClose={toggleChatBox}
+          />
+          <ThingsToDiscussBox
+            isShowing={overlay === MeetingPageOverlay.thingsToDiscuss}
+            onToggleHideClose={toggleThingsToDiscussBox}
+          />
         </div>
 
         <div className="lg:w-full lg:h-[175px] h-[125px] bg-white rounded-common p-2 ">
@@ -42,10 +77,16 @@ const MettingPage = () => {
           <MainButton className="rounded-full !bg-backgroundDark">
             <Smile className="text-paleBlack lg:size-[25px] size-[20px]" />
           </MainButton>
-          <MainButton className="rounded-full !bg-backgroundDark">
+          <MainButton
+            className="rounded-full !bg-backgroundDark"
+            onClick={toggleChatBox}
+          >
             <MessageCircle className="text-paleBlack lg:size-[25px] size-[20px]" />
           </MainButton>
-          <MainButton className="rounded-full !bg-backgroundDark">
+          <MainButton
+            className="rounded-full !bg-backgroundDark"
+            onClick={toggleThingsToDiscussBox}
+          >
             <ListCheck className="text-paleBlack lg:size-[25px] size-[20px]" />
           </MainButton>
           <MainButton

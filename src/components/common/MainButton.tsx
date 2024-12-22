@@ -22,7 +22,7 @@ const MainButton = ({
         buttonRef.current,
         { scale: 1 },
         {
-          scale: 2,
+          scale: 1.2,
           duration: 0.1,
           yoyo: true,
           repeat: 1,

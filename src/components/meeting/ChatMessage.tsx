@@ -13,7 +13,7 @@ const ChatMessage = ({ className, isMe, content }: ChatMessageProps) => {
           isMe ? "bg-primary text-white" : "bg-gray-200"
         }`}
       >
-        <div className="flex justify-between">
+        <div className="flex justify-between lg:gap-3 gap-2 items-center">
           <span className="font-KelsonBold text-md">sstonn</span>
           <span className="font-KelsonRegular text-sm">12:00 PM</span>
         </div>
