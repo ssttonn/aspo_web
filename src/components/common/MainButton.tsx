@@ -2,6 +2,7 @@ import gsap from "gsap";
 import React, { memo, MouseEventHandler, useCallback, useRef } from "react";
 
 interface MainButtonProps {
+  id?: string;
   title?: string;
   children?: React.ReactNode;
   className?: string;
@@ -9,6 +10,7 @@ interface MainButtonProps {
 }
 
 const MainButton = ({
+  id,
   title,
   children,
   className,
@@ -39,6 +41,7 @@ const MainButton = ({
 
   return (
     <button
+      id={id}
       ref={buttonRef}
       onClick={onButtonClick}
       className={`bg-primary font-KelsonBold p-4 rounded-common hover:opacity-80 transition-all duration-200 ${className}`}

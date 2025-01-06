@@ -97,7 +97,11 @@ const ThingsToDiscussBox = ({
   }, [isShowing]);
 
   return (
-    <div className="absolute top-2 left-2 right-2 bottom-2 flex justify-end">
+    <div
+      className={`absolute top-2 left-2 right-2 bottom-2 flex justify-end ${
+        !isShowing && "pointer-events-none"
+      }`}
+    >
       <div
         id="things-to-discuss-box"
         className={`bg-white rounded-common w-full lg:w-[40%] h-full lg:p-4 p-2 flex flex-col lg:gap-3 gap-2 translate-x-full ${className}`}
@@ -117,6 +121,7 @@ const ThingsToDiscussBox = ({
           {discussItems.map((item, index) => (
             <DiscussItem
               key={item.id}
+              index={index}
               content={item.content}
               isChecked={item.isChecked}
               onToggle={() => {
